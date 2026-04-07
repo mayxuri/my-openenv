@@ -1,3 +1,16 @@
+---
+title: Customer Support OpenEnv
+emoji: 🎫
+colorFrom: blue
+colorTo: green
+sdk: docker
+pinned: false
+tags:
+  - openenv
+  - customer-support
+  - reinforcement-learning
+---
+
 # Customer Support OpenEnv
 
 A **real-world OpenEnv environment** for training and evaluating AI agents on customer support ticket management — one of the most ubiquitous knowledge-work tasks at scale.
