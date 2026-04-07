@@ -68,7 +68,7 @@ class StepResult(BaseModel):
 
 
 class ResetRequest(BaseModel):
-    task_name: str = Field(..., description="One of: classify | route | respond")
+    task_name: str = Field("classify", description="One of: classify | route | respond")
     seed: Optional[int] = Field(None, description="Random seed for reproducibility")
 
 

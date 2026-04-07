@@ -94,11 +94,13 @@ def list_tasks():
 
 
 @app.post("/reset")
-def reset(request: ResetRequest):
+def reset(request: ResetRequest = None):
     """
     Reset the environment for a given task.
     Returns a session_id and the initial observation.
     """
+    if request is None:
+        request = ResetRequest()
     env = CustomerSupportEnv()
     try:
         obs = env.reset(task_name=request.task_name, seed=request.seed)
