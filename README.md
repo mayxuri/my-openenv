@@ -13,7 +13,7 @@ tags:
 
 # Customer Support OpenEnv
 
-A **real-world OpenEnv environment** for training and evaluating AI agents on customer support ticket management — one of the most ubiquitous knowledge-work tasks at scale.
+A **real-world OpenEnv environment** for training and evaluating AI agents on customer support ticket management - one of the most ubiquitous knowledge-work tasks at scale.
 
 Agents must handle three tasks of increasing difficulty: classifying tickets, routing them to the correct team with appropriate priority, and drafting complete professional responses.
 
@@ -39,19 +39,19 @@ Customer support teams handle thousands of tickets daily. Efficient triage, rout
 | `route` | Medium | 5 | Determine category + priority + team assignment |
 | `respond` | Hard | 5 | Draft a complete, professional customer response |
 
-### Task 1 — `classify` (Easy)
+### Task 1 - `classify` (Easy)
 **Goal:** Identify the correct category for an incoming ticket.  
 **Reward:** `1.0` exact match · `0.3` adjacent category · `0.0` wrong  
 **Expected baseline score:** ~0.85
 
-### Task 2 — `route` (Medium)
+### Task 2 - `route` (Medium)
 **Goal:** Set category (30%), priority (40%), and team (30%) simultaneously.  
 Priority: `low | medium | high | critical` — adjacent priority gets 50% credit.  
 Team: `billing_team | technical_team | account_team | customer_success`  
 **Reward:** Weighted sum of three components (0.0–1.0)  
 **Expected baseline score:** ~0.65
 
-### Task 3 — `respond` (Hard)
+### Task 3 - `respond` (Hard)
 **Goal:** Draft a professional, empathetic customer support response.  
 **Rubric (deterministic keyword + length check):**
 
