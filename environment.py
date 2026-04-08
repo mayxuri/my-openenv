@@ -157,7 +157,7 @@ class CustomerSupportEnv:
             # Step-efficiency bonus: reward stays full if solved in 1 step,
             # slight penalty for each extra step taken before submitting.
             step_penalty = max(0, self.step_count - 1) * 0.03
-            reward = round(max(0.0, min(1.0, raw_reward - step_penalty)), 4)
+            reward = round(max(0.01, min(0.99, raw_reward - step_penalty)), 4)
             done = True
             feedback = f"Graded. Raw score: {raw_reward:.2f}  Step penalty: {step_penalty:.2f}  Final: {reward:.2f}"
 
